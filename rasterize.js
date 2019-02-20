@@ -5,7 +5,7 @@ const TESTING = false;
 const BASE_URL = "https://ncsucgclass.github.io/prog4/"; // prog4 shell base url
 const INPUT_TRIANGLES_URL = BASE_URL + "triangles.json"; // triangles file loc
 const INPUT_ELLIPSOIDS_URL = BASE_URL + "ellipsoids.json"; // triangles file loc
-const EPSILON = 0.000001 // error value for floating point numbers
+const EPSILON = 0.000001; // error value for floating point numbers
 const TRANS_OPAQUE_BORDER = 1.0 - EPSILON; // the alpha border between transparent and opaque objects
 var defaultEye = vec3.fromValues(0.5, 0.5, -0.5); // default eye position in world space
 var defaultCenter = vec3.fromValues(0.5, 0.5, 0.5); // default view direction in world space
@@ -490,7 +490,6 @@ function loadEllipsoids() {
             inputEllipsoids[whichSet].glTriangles = []; // flat index list for webgl
 
             // temp information for ellipsoid rows
-            var vertexCount = 0;
             var prevRowIndex = -1; // the index for the previous row
             var whichRow = []; // current row
             var whichRowIndex = 0; // the index for the current row
